@@ -9,32 +9,42 @@
 
 <body>
   <h1>插补运算模拟</h1>
-  <main>
-    <section id="input">
-      <h2>请输入终点坐标：</h2>
-      <label for="target-x">x: </label>
-      <input id="target-x">
-      <label for="target-y">y: </label>
-      <input id="target-y">
-      <button id="go">运行</button>
-    </section>
-    <section id="result">
-    </section>
-    <canvas></canvas>
-  </main>
-  <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+  <div>
+    <main>
+      <fieldset>
+        <legend>选择插补策略：</legend>
+        <div>
+          <input type="radio" id="line" name="method" value="line" checked>
+          <label for="line">直线插补</label>
+        </div>
+        <div>
+          <input type="radio" id="arc" name="method" value="arc">
+          <label for="arc">圆弧插补</label>
+        </div>
+      </fieldset>
+      <section id="input">
+        <h2>请输入终点坐标：</h2>
+        <label for="target-x">x: </label>
+        <input id="target-x">
+        <label for="target-y">y: </label>
+        <input id="target-y">
+        <div id="input-cc" hidden>
+          <h2>请输入起点坐标：</h2>
+          <label for="start-x">x: </label>
+          <input id="start-x">
+          <label for="start-y">y: </label>
+          <input id="start-y">
+        </div>
+        <button id="go">运行</button>
+      </section>
+      <div class="row">
+        <section id="result">
+        </section>
+        <canvas></canvas>
+      </div>
+    </main>
+  </div>
   <script type="module" src="./main.js"></script>
-  <!-- <script src="https://d3js.org/d3-axis.v1.min.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/d3-axis@3"></script> -->
-  <!-- <script>
-    var axis = d3.axisLeft(1);
-    d3.select("body").append("svg")
-      .attr("width", 1440)
-      .attr("height", 30)
-      .append("g")
-      .attr("transform", "translate(0,30)")
-      .call(axis);
-  </script> -->
 </body>
 
 </html>

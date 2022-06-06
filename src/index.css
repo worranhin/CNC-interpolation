@@ -5,3 +5,12 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+.row {
+  margin-top: 2em;
+  display: flex;
+}
+
+canvas {
+  margin-left: 2em;
+}
