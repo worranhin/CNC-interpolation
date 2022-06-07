@@ -1,8 +1,8 @@
 {
-  "name": "electron-demo",
-  "productName": "electron-demo",
+  "name": "interpolator",
+  "productName": "插补模拟器",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "一个模拟插补运算的应用",
   "main": "src/index.js",
   "scripts": {
     "dev": "vite",
@@ -25,7 +25,7 @@
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "electron_demo"
+            "name": "插补模拟器"
           }
         },
         {
