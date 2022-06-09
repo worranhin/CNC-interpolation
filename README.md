@@ -2,7 +2,7 @@
 
 模拟插补算法的小应用
 
-Built with (electron)[https://www.electronjs.org/]
+Built with [electron](https://www.electronjs.org/)
 
 ## how to use
 
