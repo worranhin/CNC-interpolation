@@ -75,7 +75,7 @@ function update(discriminant) {
 
     // 插补并记录步骤
     histories.push(new Point(startX, startY));
-    while (step_left > 0) {
+    while (step_left >= step / 2) {
         const judgeValue = discriminant(target, current); // 偏差判别式结果
         if (method === 'line') {
             // 直线插值
@@ -84,7 +84,7 @@ function update(discriminant) {
             } else {
                 current.y += step;
             }
-        } else if (current.x <= target.x) {
+        } else if (startX <= targetX) {
             // 顺圆弧插值
             if (judgeValue >= 0) {
                 current.y -= step;
@@ -104,9 +104,20 @@ function update(discriminant) {
     }
 
     // 显示记录
+
+    // 保留小数点位数
+    let precision = 0;
+    let temp = step;
+    while (temp < 1) {
+        precision++;
+        temp *= 10;
+    }
+
     histories.forEach((item, index) => {
         const p = document.createElement('p');
-        p.innerHTML = `step ${index}: p<sub>x</sub> = ${item.x}, p<sub>y</sub> = ${item.y}`;
+        const xstr = item.x.toFixed(precision);
+        const ystr = item.y.toFixed(precision);
+        p.innerHTML = `step ${index}: p<sub>x</sub> = ${xstr}, p<sub>y</sub> = ${ystr}`;
         box.appendChild(p);
     });
 
