@@ -8,5 +8,5 @@ Built with [electron](https://www.electronjs.org/)
 
 1. Clone the repo
 2. `npm install`
-3. `npm run start` to review
+3. `npm run start` to preview
 4. `npm run make` to make the .exe file (on Windows) (it may take some time)
